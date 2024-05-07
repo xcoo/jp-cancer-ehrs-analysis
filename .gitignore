@@ -1,0 +1,7 @@
+__pycache__
+build/
+*.egg-info/
+.ipynb_checkpoints
+
+/resources/data/word-embedding/*
+!/resources/data/word-embedding/.gitkeep

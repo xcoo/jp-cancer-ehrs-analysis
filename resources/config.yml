@@ -1,0 +1,200 @@
+# Dictionary of anticancer drugs
+treatment_period:
+  # Normalization of drug names
+  normalization:
+    Afatinib:
+    - アファチニブ
+    - ジオトリフ
+    Amrubicin:
+    - アムルビシン
+    - カルセド
+    Alectinib:
+    - アレクチニブ
+    - アレセンサ
+    Atezolizumab:
+    - アテゾリズマブ
+    - テセントリク
+    Bevacizumab:
+    - アバスチン
+    - ベバシズマブ
+    Carboplatin:
+    - カルボプラチン
+    - パラプラチン
+    Ceritinib:
+    - ジカディア
+    - セリチニブ
+    Cisplatin:
+    - シスプラチン
+    - ブリプラチン
+    - ランダ
+    Crizotinib:
+    - クリゾチニブ
+    - ザーコリ
+    Dabrafenib:
+    - ダブラフェニブ
+    - タフィンラー
+    Dacomitinib:
+    - ダコミチニブ
+    - ビジンプロ
+    Docetaxel:
+    - タキソテール
+    - ドセタキセル
+    - ワンタキソテール
+    Durvalumab:
+    - デュルバルマブ
+    - イミフィンジ
+    Entrectinib:
+    - エヌトレクチニブ
+    - ロズリートレク
+    Erlotinib:
+    - エルロチニブ
+    - タルセバ
+    Etoposide:
+    - エトポシド
+    - ベプシド
+    - ラステット
+    Gefitinib:
+    - イレッサ
+    - ゲフィチニブ
+    Gemcitabine:
+    - ゲムシタビン
+    - ジェムザール
+    Irinotecan:
+    - イリノテカン
+    - トポテシンカンプト
+    Lenvatinib:
+    - レンバチニブ
+    - レンビマ
+    Lorlatinib:
+    - ロルラチニブ
+    - ローブレナ
+    Necitumumab:
+    - ネシツムマブ
+    - ポートラーザ
+    Nedaplatin:
+    - アクプラ
+    - ネダプラチン
+    Nogitecan:
+    - ノギテカン
+    - ハイカムチン
+    Nivolumab:
+    - オプジーボ
+    - ニボルマブ
+    Osimertinib:
+    - オシメルチニブ
+    - タグリッソ
+    Paclitaxel:
+    - アブラキサン
+    - パクリタキセル
+    - タキソール
+    Pembrolizumab:
+    - キイトルーダ
+    - ぺムブロリズマブ
+    Pemetrexed:
+    - アリムタ
+    - ペメトレキセド
+    Ramucirumab:
+    - サイラムザ
+    - ラムシルマブ
+    Tegafur/gimeracil/oteracil:
+    - EEエスワン
+    - TS1
+    - TS-1
+    - エスエーワン
+    - エスワンエヌピー
+    - エスワンケーケー
+    - エスワンタイホウ
+    - エスワンメイジ
+    - エヌケーエスワン
+    - テガフール・ギメラシル・オテラシルカリウム
+    - テノックス
+    - テメラール
+    - ティーエスワン
+    Tegafur/uracil:
+    - テガフール・ウラシル
+    - ユーエフティ
+    Trametinib:
+    - トラメチニブ
+    - メキニスト
+    Vinorelbine:
+    - ナベルビン
+    - ビノレルビン
+    - ロゼウス
+
+  # List of anticancer drugs for lung cancer
+  # Cf. https://www.haigan.gr.jp/guidebook2019/2020/yakuzai.html
+  includes:
+  - Afatinib
+  - Alectinib
+  - Amrubicin
+  - Atezolizumab
+  - Bevacizumab
+  - Carboplatin
+  - Ceritinib
+  - Cisplatin
+  - Crizotinib
+  - Dabrafenib
+  - Dacomitinib
+  - Docetaxel
+  - Durvalumab
+  - Entrectinib
+  - Erlotinib
+  - Etoposide
+  - Gefitinib
+  - Gemcitabine
+  - Irinotecan
+  - Lenvatinib
+  - Lorlatinib
+  - Necitumumab
+  - Nedaplatin
+  - Nivolumab
+  - Nogitecan
+  - Osimertinib
+  - Paclitaxel
+  - Pembrolizumab
+  - Pemetrexed
+  - Ramucirumab
+  - Tegafur/gimeracil/oteracil
+  - Trametinib
+  - Vinorelbine
+
+  # Exclusion list of general drugs
+  excludes:
+  - "NULL"
+  - Placebo
+  - 生理食塩
+  - 生食
+  - 補正
+  - 注射用水
+  - KCL
+  - ブドウ糖
+  - マンニットール
+  - デキサメタゾン
+  - ソルデム
+  - ネオレスタール
+  - アロキシ
+  - フレスミン
+  - プレドパ
+  - グラニセトロン
+  - クロールトリメトン
+  - ザンタック
+  - プロイメンド
+  - ラニチジン
+  - カイトリル
+  - ピコスルファート
+
+  # Optional: regimen names for combination of anticancer drugs
+  regimens:
+    AMR: Amrubicin
+    BEV+/-NIVO: Bevacizumab
+    CBDCA+PTX: Carboplatin+Paclitaxel
+    CBDCA+PTX+BEV+/-Nivo: Bevacizumab+Carboplatin+Paclitaxel
+    CBDCA+VP16: Carboplatin+Etoposide
+    CDDP+GEM: GEM+CDDP
+    CDDP+PEM: Cisplatin+Pemetrexed
+    CDDP+VP16: Cisplatin+Irinotecan
+    CDDP+VNR: Cisplatin+Vinorelbine
+    CPT11: Irinotecan
+    DTX: Docetaxel
+    PEM: Pemetrexed
+    TS1: Tegafur/gimeracil/oteracil

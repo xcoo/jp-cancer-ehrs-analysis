@@ -1,0 +1,27 @@
+services:
+  python:
+    build: .
+    image: emr-analysis
+    volumes:
+      - .:/emr-analysis
+      - jupyter_data:/jupyter
+    working_dir: /emr-analysis
+    environment:
+      - TZ=Asia/Tokyo
+      - JUPYTER_CONFIG_DIR=/jupyter/config
+      - JUPYTER_DATA_DIR=/jupyter/data
+      - JUPYTER_RUNTIME_DIR=/jupyter/runtime
+      - LD_PRELOAD=/usr/local/lib/python3.9/site-packages/torch/lib/libgomp-d22c30c5.so.1
+    ports:
+      - "8888:8888"
+      - "6006:6006"
+    ## Uncomment the following section to use GPU.
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #       - capabilities: [gpu]
+
+volumes:
+  jupyter_data:
+    driver: local
