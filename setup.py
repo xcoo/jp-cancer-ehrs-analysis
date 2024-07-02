@@ -23,7 +23,7 @@ setuptools.setup(
         "pandas==1.4.4",
         "python-dateutil==2.8.2",
         "pyyaml==6.0",
-        "scikit-learn==1.1.3",
+        "scikit-learn==1.5.0",
         "scipy==1.12.0",
         "stanza==1.4.2",
         "torch==1.13.1",
