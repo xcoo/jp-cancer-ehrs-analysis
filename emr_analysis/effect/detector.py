@@ -58,7 +58,7 @@ class LSTMClassifier0(nn.Module):
 
     @staticmethod
     def load(f, device) -> LSTMClassifier0:
-        obj = torch.load(f, map_location=device)
+        obj = torch.load(f, map_location=device, weights_only=False)
         model = LSTMClassifier0(obj["max_reports"], obj["max_tokens"], obj["embedding_dim"],
                                 obj["hidden_dim"], obj["bidirectional"],
                                 num_layers=obj["num_layers"], dropout=obj["dropout"])
@@ -118,7 +118,7 @@ class LSTMClassifier(nn.Module):
 
     @staticmethod
     def load(f, device) -> LSTMClassifier:
-        obj = torch.load(f, map_location=device)
+        obj = torch.load(f, map_location=device, weights_only=False)
         model = LSTMClassifier(obj["max_reports"], obj["max_tokens"], obj["int2effect_dict"],
                                obj["embedding_dim"], obj["hidden_dim"], obj["label_size"],
                                obj["bidirectional"], num_layers=obj["num_layers"],
