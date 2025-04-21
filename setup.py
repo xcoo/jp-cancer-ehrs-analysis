@@ -26,7 +26,7 @@ setuptools.setup(
         "scikit-learn==1.5.0",
         "scipy==1.12.0",
         "stanza==1.4.2",
-        "torch==2.4.0",
+        "torch==2.6.0",
     ],
     extras_require={
         "dev": [
